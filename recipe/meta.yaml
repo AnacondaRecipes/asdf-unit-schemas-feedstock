@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
   number: 0
 
 requirements:
@@ -36,10 +36,15 @@ test:
 about:
   home: https://pypi.org/project/asdf-unit-schemas/
   summary: ASDF schemas for units
+  license_family: BSD
   license: BSD-3-Clause
   license_file: LICENSE
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/42309
+    reason: Carl Zeiss ask
   recipe-maintainers:
+    - ianaobi
     - braingram
     - WilliamJamieson
