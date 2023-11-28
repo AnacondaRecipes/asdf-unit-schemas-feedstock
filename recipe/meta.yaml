@@ -27,7 +27,7 @@ requirements:
 
 test:
   imports:
-    - asdf-unit-schemas
+    - asdf_unit_schemas
   commands:
     - pip check
   requires:
